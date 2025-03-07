@@ -13,9 +13,13 @@
 		"preview_image_url": "https://imagedelivery.net/wSMYJvS3Xw-n339CbDyDIA/e42eec61-db86-49c8-7b29-c3ed4783e400/public"
 	},
 	"dependencies": {
+		"@dotlottie/react-player": "^1.6.19",
+		"@lottiefiles/dotlottie-react": "^0.13.1",
+		"framer-motion": "^12.4.10",
 		"next": "14.2.23",
 		"react": "18.3.1",
-		"react-dom": "18.3.1"
+		"react-dom": "18.3.1",
+		"tailwind-merge": "^3.0.2"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250204.0",
@@ -32,12 +36,12 @@
 	},
 	"scripts": {
 		"build": "next build",
-		"check": "opennextjs-cloudflare && tsc && wrangler deploy --dry-run",
-		"deploy": "opennextjs-cloudflare && wrangler deploy",
 		"dev": "next dev",
 		"lint": "next lint",
-		"preview": "opennextjs-cloudflare && wrangler dev",
 		"start": "next start",
+		"check": "opennextjs-cloudflare && tsc && wrangler deploy --dry-run",
+		"deploy": "opennextjs-cloudflare && wrangler deploy",
+		"preview": "opennextjs-cloudflare && wrangler dev",
 		"types": "wrangler types --env-interface CloudflareEnv env.d.ts"
 	}
 }

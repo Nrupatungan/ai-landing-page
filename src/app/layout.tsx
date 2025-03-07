@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { twMerge } from 'tailwind-merge'
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ai-seo-landing-page",
-  description: "An app to improve your website's SEO using AI",
+  title: "AI Startup Landing Page",
+  description: "A landing page for an AI startup created with Frontend Tribe",
 };
 
 export default function RootLayout({
@@ -16,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={twMerge(inter.className, "bg-black text-white antialiased")}>{children}</body>
     </html>
   );
 }

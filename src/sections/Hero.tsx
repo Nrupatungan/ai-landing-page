@@ -26,7 +26,7 @@ export const Hero = () => {
     transition={{
       repeat: Infinity,
       ease: "linear",
-      duration: 120
+      duration: 90
     }}
     ref={sectionRef}
     >

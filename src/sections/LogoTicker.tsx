@@ -1,13 +1,8 @@
 "use client";
 
-import acmeLogo from '@/assets/logo-acme.png'
-import apexLogo from '@/assets/logo-apex.png'
-import celestialLogo from '@/assets/logo-celestial.png'
-import quantumLogo from '@/assets/logo-quantum.png'
-import pulseLogo from '@/assets/logo-pulse.png' 
-import echoLogo from '@/assets/logo-echo.png'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { images } from '@/data/images';
 
 export const LogoTicker = () => {
   return (
@@ -32,9 +27,9 @@ export const LogoTicker = () => {
               ease: "linear",
             }}
             >
-              {[acmeLogo,apexLogo,celestialLogo,quantumLogo,pulseLogo,echoLogo,acmeLogo,apexLogo,celestialLogo,quantumLogo,pulseLogo,echoLogo].map((logo) => (
-                <Image key={logo.src} src={logo} alt={`${logo.src.replace('logo-', '').replace('.png', '')} logo`} className='w-auto h-6' width={100} height={24} />
-              ))
+              {[...images, ...images].map((image) => (
+                <Image key={image.content.src} src={image.content.src} alt={`${image.content.src.replace('logo-', '').replace('.png', '')} logo`} className='w-auto h-6' width={100} height={24} />
+                ))
               }
             </motion.div>
           </div>

@@ -14,7 +14,7 @@ export const LogoTicker = () => {
           </div>
 
           <div className="flex flex-1 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
-            <motion.div className='flex flex-none gap-14 pr-14 -translate-x-1/2'
+            <motion.div className='flex flex-none gap-14 pr-14'
             initial={{
               translateX: "-50%"
             }}
@@ -22,9 +22,10 @@ export const LogoTicker = () => {
               translateX: "0%",
             }}
             transition={{
-              duration: 30,
+              duration: 40,
               repeat: Infinity,
               ease: "linear",
+              repeatType: "loop"
             }}
             >
               {[...images, ...images].map((image) => (

@@ -24,13 +24,12 @@ export const LogoTicker = () => {
               translateX: "-50%"
             }}
             animate={{
-              translateX: "0",
+              translateX: "0%",
             }}
             transition={{
               duration: 30,
               repeat: Infinity,
               ease: "linear",
-              repeatType: "loop"
             }}
             >
               {[acmeLogo,apexLogo,celestialLogo,quantumLogo,pulseLogo,echoLogo,acmeLogo,apexLogo,celestialLogo,quantumLogo,pulseLogo,echoLogo].map((logo) => (
